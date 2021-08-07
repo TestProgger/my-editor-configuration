@@ -1,7 +1,13 @@
 filetype on
 filetype plugin on
 filetype indent on
+
 syntax on
+colorscheme sublimemonokai
+
+set noswapfile
+
+set autoread
 
 set number
 set noruler
@@ -21,10 +27,9 @@ set softtabstop=4
 set expandtab
 set paste
 
-call plug#begin('~/.vim/plugged')
+set wrap linebreak
 
-"Theme
-Plug 'romainl/flattened'
+call plug#begin('~/.vim/plugged')
 
 " Vid stroki sostojania
 Plug 'itchyny/lightline.vim'
@@ -33,8 +38,13 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'vim-syntastic/syntastic'
 
-call plug#end()
+Plug 'mattn/emmet-vim'
 
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+call plug#end()
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -46,6 +56,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-y>'
+
 
 set laststatus=2
 set noshowmode
@@ -55,4 +69,3 @@ set mouse=a
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 map <C-q> :SyntasticCheck<CR>
-
