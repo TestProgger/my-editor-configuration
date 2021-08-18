@@ -27,6 +27,12 @@
 
 ```
 
+#### Install Dep's
+```bash
+    python -m pip install neovim pynvim
+    npm install -g neovim
+```
+
 #### Run PlugInstall in NeoVim
 ```
     :PlugInstall
