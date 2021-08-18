@@ -27,6 +27,12 @@
 
 ```
 
+#### Install Prettier
+```bash
+    sudo apt install prettier   #Ubuntu/Debian
+    sudo pacman -S prettier     #Arch
+```
+
 #### Install Dep's
 ```bash
     python -m pip install neovim pynvim

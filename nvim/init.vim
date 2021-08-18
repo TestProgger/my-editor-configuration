@@ -76,6 +76,7 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'windwp/nvim-ts-autotag'
 Plug 'windwp/nvim-autopairs'
@@ -85,6 +86,8 @@ Plug 'marko-cerovac/material.nvim'
 Plug 'rafamadriz/neon'
 
 Plug 'hoob3rt/lualine.nvim'
+
+Plug 'mhartington/formatter.nvim'
 
 call plug#end()
 
@@ -112,7 +115,30 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'material'.set()
+require('formatter').setup({
+  logging = false,
+  filetype = {
 
+    json = {
+        function()
+            return {
+                exe = "python -m json.tool",
+                stdin = true
+            }
+        end
+    },
+    javascript = {
+        -- prettier
+       function()
+          return {
+            exe = "prettier",
+            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
+            stdin = true
+          }
+        end
+    },
+  }
+})
 
 require'lualine'.setup {
   options = {
@@ -151,6 +177,7 @@ require'nvim-treesitter.configs'.setup {
 
 require('nvim-autopairs').setup{}
 
+
 EOF
 
 " NERD Tree
@@ -160,5 +187,10 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 
-"set foldmethod=expr
-"set foldexpr=nvim_treesitter#foldexpr()
+" Formatting
+nnoremap <C-f> :Format<CR>
+
+
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
