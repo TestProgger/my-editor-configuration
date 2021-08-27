@@ -137,6 +137,24 @@ require('formatter').setup({
           }
         end
     },
+    html = {
+        function()
+            return {
+                exe = "prettier",
+                args = {"--stdin-filepath" ,  vim.api.nvim_buf_get_name(0) , "--single-quote"},
+                stdin = true
+            }
+        end
+    },
+    css = {
+        function()
+            return {
+                exe = "prettier",
+                args = { "--stdin-filepath" , vim.api.nvim_buf_get_name(0) , '--single-quote' },
+                stdin = true
+            }
+        end
+    }
   }
 })
 
@@ -183,8 +201,8 @@ EOF
 " NERD Tree
 nnoremap <C-n> :NERDTreeToggle<CR>
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 
 " Formatting
