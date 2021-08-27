@@ -1,7 +1,3 @@
-# My Configs od Editors [ vim , lite ]
-
-
-
 # AUTO INSTALLATION
 ```bash
     chmod +x ./install.sh
