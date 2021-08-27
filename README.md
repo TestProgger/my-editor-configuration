@@ -1,6 +1,15 @@
 # My Configs od Editors [ vim , lite ]
 
 
+
+# AUTO INSTALLATION
+```bash
+    chmod +x ./install.sh
+    sudo ./install.sh
+```
+
+# MANUAL INSTALLATION
+
 ## ZSH
 #### Move .zshrc into your $HOME dir
 ```bash
