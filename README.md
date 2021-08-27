@@ -1,19 +1,35 @@
 # My Configs od Editors [ vim , lite ]
 
 
-
-## VIM
-
-#### Install Vim-Plug
+## ZSH
+#### Move .zshrc into your $HOME dir
 ```bash
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    cp -f .zshrc ~/.zshrc
 ```
 
-#### Run PlugInstall in Vim
+#### Install [Oh-My-Zsh](https://ohmyz.sh/)
+
+#### Install additional plugins
 ```bash
-	:PlugInstall
+    
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 ```
+
+#### Install fzf & tmux
+```bash
+    sudo apt install -y fzf tmux  # Ubuntu/Debian
+    sufor pacman -S fzf tmux      # ArchLinux
+```
+
+## TMUX 
+#### Move .tmux.conf into your $HOME dir
+```bash
+    cp -f .tmux.conf ~/.tmux.conf
+```
+
+
 ## NEOVIM
 
 #### Move the nvim folder to the ~/.config directory
