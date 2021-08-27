@@ -1,12 +1,19 @@
-# AUTO INSTALLATION
+## Nerd Fonts 
+
+#### I use [JetbrainsMonoMedium](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip)
+
+#### You can find the [NerdFont](https://www.nerdfonts.com/font-downloads) that suits you
+
+
+## AUTO INSTALLATION
 ```bash
     chmod +x ./install.sh
     sudo ./install.sh
 ```
 
-# MANUAL INSTALLATION
+## MANUAL INSTALLATION
 
-## ZSH
+### ZSH
 #### Move .zshrc into your $HOME dir
 ```bash
     cp -f .zshrc ~/.zshrc
@@ -28,14 +35,14 @@
     sufor pacman -S fzf tmux      # ArchLinux
 ```
 
-## TMUX 
+### TMUX 
 #### Move .tmux.conf into your $HOME dir
 ```bash
     cp -f .tmux.conf ~/.tmux.conf
 ```
 
 
-## NEOVIM
+### NEOVIM
 
 #### Move the nvim folder to the ~/.config directory
 #### Install Nerd-Fonts
