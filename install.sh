@@ -9,7 +9,7 @@ DISTRO_ID=$(cat /etc/os-release | grep ID_LIKE |  cut -d "=" -f 2)
 
 [[ DISTRO_ID -eq "debian" ]] && apt update -y && apt install -y zsh tmux fzf neovim python3 python3-pip nodejs npm prettier automake autoconf git && sync
 
-[[ DISTRO_ID -eq "ubuntu debian"]] && apt update -y && apt install -y zsh tmux fzf neovim python3 python3-pip nodejs npm prettier automake autoconf git && sync
+[[ DISTRO_ID -eq "ubuntu debian" ]] && apt update -y && apt install -y zsh tmux fzf neovim python3 python3-pip nodejs npm prettier automake autoconf git && sync
 
 REP_PATH="$(pwd)"
 
