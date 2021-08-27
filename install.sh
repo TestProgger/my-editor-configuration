@@ -29,5 +29,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 #Preparing for NeoVim
 python -m pip install neovim pynvim
 npm install -g neovim 
-nvim -c ":PlugInstall"
+nvim -c ":PlugInstall" -c ":CocInstall coc-tsserver" -c":CocInstall coc-python"
 

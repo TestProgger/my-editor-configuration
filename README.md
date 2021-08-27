@@ -63,11 +63,13 @@
 
 #### Install Dep's
 ```bash
-    python -m pip install neovim pynvim
+    python -m pip install neovim pynvim jedi
     npm install -g neovim
 ```
 
 #### Run PlugInstall in NeoVim
 ```
     :PlugInstall
+    :CocInstall coc-tsserver
+    :CocInstall coc-python 
 ```
