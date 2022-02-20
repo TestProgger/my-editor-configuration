@@ -5,12 +5,6 @@
 #### You can find the [NerdFont](https://www.nerdfonts.com/font-downloads) that suits you
 
 
-## AUTO INSTALLATION
-```bash
-    chmod +x ./install.sh
-    sudo ./install.sh
-```
-
 ## MANUAL INSTALLATION
 
 ### ZSH
@@ -22,8 +16,7 @@
 #### Install [Oh-My-Zsh](https://ohmyz.sh/)
 
 #### Install additional plugins
-```bash
-    
+```bash    
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
@@ -65,11 +58,4 @@
 ```bash
     python -m pip install neovim pynvim jedi
     npm install -g neovim
-```
-
-#### Run PlugInstall in NeoVim
-```
-    :PlugInstall
-    :CocInstall coc-tsserver
-    :CocInstall coc-python 
 ```
